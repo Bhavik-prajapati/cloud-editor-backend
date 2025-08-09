@@ -10,11 +10,9 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
     logger.info('Root endpoint hit');
-    res.send('Hello World');
+    res.send('Hello World to backend');
 });
-
 app.use('/api/users',userRoutes);
-
 app.listen(5000 | process.env.PORT,()=>{
     console.log(`backend is started running on http://localhost:${process.env.PORT}/`);
 })
